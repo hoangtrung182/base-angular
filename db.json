@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "San pham 1",
+      "price": 1000,
+      "quantity": 2,
+      "description": "Goods",
+      "image": "https://picsum.photos/100/100"
+    },
+    {
+      "id": 3,
+      "name": "San pham 3",
+      "price": 1000,
+      "quantity": 2,
+      "description": "Goods",
+      "image": "https://picsum.photos/100/100"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "some comment",
+      "email": "admin",
+      "password": "12345",
+      "role": "2"
+    },
+    {
+      "id": 2,
+      "username": "some comment",
+      "email": "user",
+      "password": "12345",
+      "role": "1"
+    },
+    {
+      "email": "hoangtrung",
+      "password": "232323",
+      "id": 3
+    },
+    {
+      "email": "dsdsdd",
+      "password": "dsdsd",
+      "role": "1",
+      "id": 4
+    }
+  ]
+}

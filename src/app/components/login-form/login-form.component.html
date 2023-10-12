@@ -1,0 +1,14 @@
+
+<h1>Login Form</h1>
+
+<form action="" [formGroup]="currentUser" (ngSubmit)="handleSubmit()">
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <button>Login</button>
+</form>

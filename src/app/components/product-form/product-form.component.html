@@ -1,0 +1,24 @@
+<h1>Product Form</h1>
+<form action="" [formGroup]="productForm" (ngSubmit)="handleSubmit()">
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Price</label>
+        <input type="text" class="form-control" formControlName="price">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Quantity</label>
+        <input type="text" class="form-control" formControlName="quantity">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Description</label>
+        <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Image</label>
+        <input type="text" class="form-control" formControlName="image">
+    </div>
+    <button class="btn btn-primary">ADD</button>
+</form>
