@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="cart-container">
+        <h1>My Cart</h1>
+        <div id="cartPopup" class="cart-popup"></div>
+        <div class="" *ngIf="allProductCarts">
+            <div class="cart-item" *ngFor="let cart of allProductCarts; index as i">
+                <img [src]="cart.image" alt="Product 1">
+                <div class="item-details">
+                    <div class="">
+                        <h3>{{ cart.name}}</h3>
+                        <p class="price">{{cart.price}}$</p>
+                        <p class="quantity">SL: {{cart.quantity}}</p>
+                    </div>
+                    <button class="btn btn-danger" (click)="handleRemove(cart)">Remove</button>
+                </div>
+            </div>
+            <div class="cart-total">
+                <h2>Total: {{ totalPrice() }}$</h2>
+                <button class="clear-cart" (click)="clearCart()">Checkout</button>
+                <button class="go-home" routerLink="/home">Go Home</button>
+            </div>
+        </div>
+    </div>
+</div>

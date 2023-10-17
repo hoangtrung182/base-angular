@@ -1,18 +1,19 @@
-
-<h1>Register Form</h1>
-
-<form action="" [formGroup]="authForm" (ngSubmit)="handleSubmit()">
-    <div class="mb-3">
-        <label for="" class="form-label">Username</label>
-        <input type="text" class="form-control" formControlName="username">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Email</label>
-        <input type="text" class="form-control" formControlName="email">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Password</label>
-        <input type="password" class="form-control" formControlName="password">
-    </div>
-    <button>Register</button>
-</form>
+<div class="container">
+    <h2>Register Form</h2>
+    <form [formGroup]="authForm" (ngSubmit)="handleSubmit()">
+        <div class="mb-3">
+            <label for="" class="form-label">Username</label>
+            <input type="text" class="form-control" formControlName="username">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input type="text" class="form-control" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <p>Have you already an account? <a routerLink="/auth/login">Sign In</a></p>
+        <input type="submit" value="Register">
+    </form>
+</div>  

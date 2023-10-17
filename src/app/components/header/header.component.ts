@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  constructor() {}
 
+  username: string = '';
+  ngOnInit() {
+    const user = JSON.parse(localStorage.getItem('user_info')!);
+    this.username = user.username;
+  }
+
+  handleLogout() {
+    localStorage.removeItem('user_info');
+    localStorage.removeItem('user_role');
+  }
 }

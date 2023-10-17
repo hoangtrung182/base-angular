@@ -1,0 +1,28 @@
+
+/* Navbar */
+nav {
+    background-color: #f2ebeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+li {
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #ea2107;
+}

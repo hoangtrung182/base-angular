@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { Iproduct } from 'src/app/interface';
@@ -17,11 +17,11 @@ export class ProductFormComponent {
 
   currentProduct!: Iproduct;
   productForm = this.form.group({
-    name: [''],
-    price: [0],
-    quantity: [0],
+    name: ['', [Validators.required, Validators.minLength(4)]],
+    price: [0, [Validators.required, Validators.minLength(1)]],
+    quantity: [0, [Validators.required, Validators.minLength(1)]],
     description: [''],
-    image: ['']
+    image: ['', [Validators.required]]
   });
 
   async ngOnInit() {
@@ -34,7 +34,10 @@ export class ProductFormComponent {
   };
 
   async handleSubmit() {
-    if(!this.productForm.valid) return;
+    if(this.productForm.invalid) {
+      console.log('Oops! Sản phẩm không được chấp nhận');
+      return;
+    }
     
     if(this.mode === 'create') {
       try {

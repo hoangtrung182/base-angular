@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Form, FormBuilder } from '@angular/forms';
+import { Form, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { lastValueFrom } from 'rxjs';
 import { User } from 'src/app/interface';
@@ -13,15 +13,17 @@ export class AuthFormComponent {
   constructor(private form: FormBuilder, private userService: AuthService, private nav: Router) {}
 
   authForm = this.form.group({
-    username: [''],
-    email: [''],
-    password: [''],
+    username: ['', [Validators.required, Validators.minLength(3)]],
+    email: ['', [Validators.required, Validators.email, Validators.minLength(6)]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
     role: ['1']
   })
   
   async handleSubmit() {
-    console.log(this.authForm.value)
-    if(!this.authForm.valid) return;
+    if(!this.authForm.valid) {
+      alert("oops, error happened !");
+      return;
+    }
       try {
         await lastValueFrom(this.userService.register((this.authForm.value) as User));
         this.nav.navigate(['/auth']);

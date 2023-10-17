@@ -1,0 +1,22 @@
+
+
+/* animation popup */
+
+.cart-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    z-index: 1;
+    background-color: #c91111;
+    color: #fff;
+    border: 1px solid #c91111;
+    border-radius: 4px;
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { bottom: 0; opacity: 0}
+    to { bottom: 30px; opacity: 1;}
+}

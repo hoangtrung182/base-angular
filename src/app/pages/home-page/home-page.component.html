@@ -1,0 +1,40 @@
+
+<div class="main">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sort-options">
+        <label for="sort-price">Sort by Price:</label>
+        <select id="sort-price" >
+            <option value="low" (click)="handleChange('low')">Low to High</option>
+            <option value="high" (click)="handleChange('high')">High to Low</option>
+        </select>
+        </div>
+        <div class="sort-options">
+        <label for="sort-name">Sort by Name:</label>
+        <select id="sort-name">
+            <option value="ascending" (click)="handleChange('ascending')">A to Z</option>
+            <option value="descending" (click)="handleChange('descending')">Z to A</option>
+        </select>
+        </div>
+    </div>
+  <!-- End -->
+    <div class="row gap-4 m-2 text-center">
+        <div class="d-flex justify-content-center align-items-center">
+            <input type="text" [(ngModel)]="searchValue" class="form-control w-75 mx-3" placeholder="Searching for something...">
+            <button class="btn btn-primary">Search</button>
+        </div>
+        <div class="product-card col-4 col-span-4" *ngFor="let product of products| searchBox : searchValue;index as i">
+            <img [src]="product.image" alt="Product Image">
+            <div class="product-card-content">
+                <h2 class="product-title">{{ product.name}}</h2>
+                <p class="product-description">{{ product.description}}</p>
+                <p class="product-price">${{product.price}}</p>
+                <button class="product-button" (click)="addToCart(product)">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div id="cartPopup" class="cart-popup"></div>
+    <form action="" (ngSubmit)="handleSubmit()">
+        <input type="file" class="form-control">
+    </form>
+</div>

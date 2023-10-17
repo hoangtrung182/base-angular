@@ -1,1 +1,12 @@
-<p>header works!</p>
+<nav>
+  <ul>
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/contact">Contact</a></li>
+      <li><a routerLink="/cart">My Cart</a></li>
+  </ul>
+  <ul>
+    <li><a routerLink="/profile">Hello, {{username}}</a></li>
+    <li><a routerLink="/auth" (click)="handleLogout()">Logout</a></li>
+  </ul>
+</nav>

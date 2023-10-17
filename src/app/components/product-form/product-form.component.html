@@ -1,4 +1,4 @@
-<h1>Product Form</h1>
+<h1 class="text-center">{{ mode === 'update' ? "Update" : "Create"}} Product</h1>
 <form action="" [formGroup]="productForm" (ngSubmit)="handleSubmit()">
     <div class="mb-3">
         <label for="" class="form-label">Name</label>
@@ -20,5 +20,5 @@
         <label for="" class="form-label">Image</label>
         <input type="text" class="form-control" formControlName="image">
     </div>
-    <button class="btn btn-primary">ADD</button>
+    <button class="btn btn-primary">{{ mode === 'update' ? "Update" : "ADD"}}</button>
 </form>

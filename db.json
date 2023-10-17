@@ -1,46 +1,85 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "San pham 1",
-      "price": 1000,
-      "quantity": 2,
-      "description": "Goods",
-      "image": "https://picsum.photos/100/100"
+      "id": 2,
+      "name": "Dầu ăn",
+      "price": 24,
+      "quantity": 9,
+      "description": "Dầu ăn Medan tốt cho sức khoẻ",
+      "image": "https://picsum.photos/300/201"
     },
     {
       "id": 3,
-      "name": "San pham 3",
-      "price": 1000,
-      "quantity": 2,
-      "description": "Goods",
-      "image": "https://picsum.photos/100/100"
+      "name": "Gạo ST 25",
+      "price": 15,
+      "quantity": 20,
+      "description": "Gạo st 25 tự hào gạo ngon nhất thế giới",
+      "image": "https://picsum.photos/300/202"
+    },
+    {
+      "id": 4,
+      "name": "Ngô Luộc",
+      "price": 9,
+      "quantity": 15,
+      "description": "Ngô Luộc thơm ngon, sạch sẽ",
+      "image": "https://picsum.photos/301/200"
+    },
+    {
+      "id": 5,
+      "name": "Nước mắm Nam Ngư",
+      "price": 14,
+      "quantity": 20,
+      "description": "Nước mắm cá ngừ, tốt cho sk, chất lượng",
+      "image": "https://picsum.photos/302/200"
+    },
+    {
+      "id": 6,
+      "name": "Bột giặt OMO",
+      "price": 20,
+      "quantity": 6,
+      "description": "Bột giặt tốt, tinh xảo, công nhận quốc tế",
+      "image": "https://picsum.photos/299/200"
     }
   ],
   "users": [
     {
       "id": 1,
-      "username": "some comment",
+      "username": "Hoang Viet Trung",
       "email": "admin",
       "password": "12345",
-      "role": "2"
+      "role": "2",
+      "age": 24,
+      "major": "Web developer",
+      "location": "Ha Noi"
     },
     {
       "id": 2,
-      "username": "some comment",
+      "username": "Vu Quynh",
       "email": "user",
       "password": "12345",
-      "role": "1"
+      "role": "1",
+      "age": 18,
+      "major": "Digital Marketing",
+      "location": "Nam Dinh"
     },
     {
-      "email": "hoangtrung",
-      "password": "232323",
+      "username": "Hoang Trung",
+      "email": "hoangtrung@gmail.com",
+      "password": "anhtrung",
+      "role": "2",
+      "age": 20,
+      "major": "Designer",
+      "location": "Ha Tay",
       "id": 3
     },
     {
-      "email": "dsdsdd",
-      "password": "dsdsd",
+      "username": "Vu Quynh",
+      "email": "user@gmail.com",
+      "password": "vuquynh",
       "role": "1",
+      "age": 21,
+      "major": "Marketer",
+      "location": "Phuc Tho, Ha Noi",
       "id": 4
     }
   ]

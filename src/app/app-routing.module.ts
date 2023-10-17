@@ -7,13 +7,31 @@ import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.com
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { AuthFormComponent } from './components/auth-form/auth-form.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { BaseLayoutComponent } from './layouts/base-layout/base-layout.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { DetailPageComponent } from './pages/detail-page/detail-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: '', component: BaseLayoutComponent, children: [
+    { path: '', redirectTo: 'home', pathMatch: 'full'},
+    { path: 'home', component: HomePageComponent },
+    { path: 'products/:id', component: DetailPageComponent},
+    { path: 'about', component: AboutPageComponent},
+    { path: 'contact', component: ContactPageComponent},
+    { path: 'cart', component: CartPageComponent},
+    { path: 'profile', component: ProfilePageComponent}
+  ]},
   { path: 'admin', component: AdminLayoutComponent, children: [
     { path: 'dashboard', component: DashboardPageComponent}, 
     { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
     { path: 'products/add', component: ProductFormComponent},
-    { path: 'products/:id/edit', component: ProductFormComponent}
+    { path: 'products/:id/edit', component: ProductFormComponent},
+    { path: 'profile', component: ProfilePageComponent}
   ]},
   {
     path: 'auth', component: AuthLayoutComponent, children: [

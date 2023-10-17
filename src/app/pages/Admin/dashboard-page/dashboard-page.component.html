@@ -1,7 +1,9 @@
 
-<h1>List Products</h1>
+<h1 class="text-center">List Products</h1>
+<input type="text" [(ngModel)]="searchValue" placeholder="Searching item... " class="form-control my-4">
 
-<table class="table">
+<button class="btn btn-secondary" routerLink="/admin/products/add">ADD NEW</button>
+<table class="table text-center">
     <thead>
         <tr>
             <th>#</th>
@@ -13,16 +15,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let product of products; index as i">
+        <tr *ngFor="let product of products| searchBox : searchValue; index as i">
             <td>{{ i + 1}}</td>
             <td>{{ product.name}}</td>
             <td>{{ product.price}}</td>
             <td>{{ product.quantity}}</td>
             <td><img [src]="product.image" alt=""></td>
             <td>
-                <button class="btn btn-danger" (click)="handleClick(product.id!)">Remove</button>
-                <button class="btn btn-light" routerLink="/admin/products/{{product.id}}/edit">Update</button>
+                <button class="btn btn-danger mx-4" (click)="handleClick(product.id!)">Remove</button>
+                <button class="btn btn-secondary" routerLink="/admin/products/{{product.id}}/edit">Update</button>
             </td>
         </tr>
     </tbody>
 </table>
+<div id="cartPopup" class="cart-popup"></div>

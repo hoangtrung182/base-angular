@@ -1,0 +1,10 @@
+<h2 class="text-center fst-italic my-4">My Profile</h2>
+<div class="profile-card" *ngIf="user">
+    <img class="profile-image" src="https://picsum.photos/300/200" alt="Profile Image">
+    <div class="profile-name">{{ user.username }}</div>
+    <div class="profile-title">{{ user.major}}</div>
+    <div class="profile-details">
+        <div class="detail">Age: {{ user.age}}</div>
+        <div class="detail">Location: {{ user.location}}</div>
+    </div>
+</div>
